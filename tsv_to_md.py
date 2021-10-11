@@ -6,26 +6,26 @@ from io import StringIO
 import numpy as np
 import xerox
 
-# OVERVIEW:
-# input: data in the clipboard with tsv format
+# OVERVIEW: Share simple data in monospace font like a boss (also make your MD files better)
+# input: data in the clipboard with *TSV* format
 # output: markdown formatted table on your clipboard
 
-# HOW TO USE:
+# HOW TO USE: -- follow setup instructions first
 # run tsv_to_md.command from spotlight (Command + Space) while you have tsv data in your clipboard.
 # Example Input:
-# attach_effective_start_date	attach_effective_end_date	current_row_ind
+# effective_start_date	effective_end_date	current_row_ind
 # 2002-06-21	2016-04-12	1
 # 2002-09-11	2016-02-29	1
 # 2002-11-08		1
 # 2002-11-13		1
 
 # Example Output: Note output only looks good with monospace font. use ``` in slack to make it look nice there.
-# | attach_effective_start_date | attach_effective_end_date | current_row_ind |
-# |-----------------------------|---------------------------|-----------------|
-# | 2002-06-21                  | 2016-04-12                | 1               |
-# | 2002-09-11                  | 2016-02-29                | 1               |
-# | 2002-11-08                  |                           | 1               |
-# | 2002-11-13                  |                           | 1               |
+# | effective_start_date | effective_end_date | current_row_ind |
+# |----------------------|--------------------|-----------------|
+# | 2002-06-21           | 2016-04-12         | 1               |
+# | 2002-09-11           | 2016-02-29         | 1               |
+# | 2002-11-08           |                    | 1               |
+# | 2002-11-13           |                    | 1               |
 
 
 # SETUP:
@@ -34,8 +34,8 @@ import xerox
 # create duplicate of this file (it should be in your data tools folder already though).
 # If the .command doesn't already exist replace ".py" -> ".command"
 # run `chmod +x <full-file-path>.command` in the terminal
-# terminal -> preferences. On general tab select the profile you want to use by default.
-# on profiles tab select the profile you are using as your default profile -> shell -> When the Shell Exits = "close if shell exited cleanly"
+# terminal -> preferences. On general tab select the profile to use by default.
+# on profiles tab select default profile -> shell -> When the Shell Exits = "close if shell exited cleanly"
 
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
